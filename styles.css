@@ -3,6 +3,14 @@ body{
     font-family: 'Inter', sans-serif;
   }
 
+  .main-section .content h1 span{
+    background: linear-gradient(80deg, #233C68 0%, #0057FF 51.97%, #3AF2FF 97.83%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+  }
+
 .navbar {
   font-family: 'Inter', sans-serif;
       display: flex;
@@ -2801,6 +2809,87 @@ input[type="email"] {
 }
 
 @media screen and (max-width: 480px){
+  .main-section.aboutus,.main-section.affiliate,.main-section.contact {
+    position: relative;
+    height: 100vh;
+}
+
+.main-section.aboutus::after ,
+.main-section.affiliate::after
+,.main-section.contact::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5; /* Adjust the opacity value to control the darkness of the overlay */
+}
+
+.main-section.aboutus .content
+,.main-section.affiliate .content
+,.main-section.contact .content {
+    position: relative;
+    z-index: 1;
+    margin-right: 110px;
+}
+.main-section h2{
+  font-size: large;
+}
+
+  .main-section{
+    background-position-x: -500px;
+  }
+ .main-section.aboutus{
+    background-position-x: -215px;
+    background-image: url('images/bgabout.png');
+  }
+  .main-section.contact{
+    background-image: url('images/bgcontact.png');
+    background-position-x: -90px;
+  }
+  .main-section.affiliate{
+    background-image: url('images/bgaffiliate.png');
+    background-position-x: -340px;
+  }
+  .main-section.affiliate .content{
+    padding: 80px 0px 10px 10px;
+  }
+  .points-box.affiliate{
+    display: none;
+  }
+  .main-section .content{
+    color: white;
+  }
+
+  .main-section.aboutus .content p
+  ,.main-section.affiliate .content p
+  ,.main-section.contact .content p,
+  .main-section.aboutus .content h1
+  ,.main-section.affiliate .content h1
+  ,.main-section.contact .content h1{
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+  .main-section.aboutus .content h2
+  ,.main-section.affiliate .content h2
+  ,.main-section.contact .content h2,
+  .main-section.contact .content h1 span,
+  .main-section.aboutus .content h1 span
+  ,.main-section.affiliate .content h1 span{
+    letter-spacing: 1px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #19f0ff 0%, #00d0ff 46.35%, #3af2ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .main-section.affiliate .button1{
+    margin-top: 100px;
+  }
   .phase-menu{
     padding: 20px;
   }
@@ -2879,7 +2968,7 @@ input[type="email"] {
   width: auto;
 }
 .nav-links.active{
-  transform: translate(25px, 0px)
+  transform: translate(35px, 0px)
 }
 .nav-links{
   overflow: hidden;
